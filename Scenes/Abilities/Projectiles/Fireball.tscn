@@ -1,7 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
+<<<<<<< Updated upstream
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Abilities/Projectiles/Fireball.gd" type="Script" id=2]
+=======
+[ext_resource path="res://Images/icon.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Abilities/Fireball.gd" type="Script" id=2]
+>>>>>>> Stashed changes
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 24.0
