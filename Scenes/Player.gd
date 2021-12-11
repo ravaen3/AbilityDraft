@@ -6,7 +6,7 @@ extends KinematicBody2D
 # var b = "text"
 var health=100.0
 var is_master = false
-var Speed = 500
+var speed = 700
 var AttackSpeed = 2
 signal ability(slot)
 # Called when the node enters the scene tree for the first time.
@@ -24,19 +24,20 @@ func _process(delta):
 	if is_master:
 		var velocity = Vector2()
 		if Input.is_action_pressed("up"):
-			velocity.y = -Speed
+			velocity.y = -1
 		if Input.is_action_pressed("down"):
-			velocity.y = Speed
+			velocity.y = 1
 		if Input.is_action_pressed("left"):
-			velocity.x = -Speed
+			velocity.x = -1
 		if Input.is_action_pressed("right"):
-			velocity.x = Speed
+			velocity.x = 1
 		if Input.is_action_pressed("ability1"):
 			emit_signal("ability", 1)
 		if Input.is_action_just_pressed("ability2"):
 			emit_signal("ability", 2)
 		if Input.is_action_just_pressed("ability3"):
 			emit_signal("ability", 3)
+		velocity=velocity.normalized()*speed
 		velocity = move_and_slide(velocity)
 		rpc_unreliable("update_position", position)
 	
