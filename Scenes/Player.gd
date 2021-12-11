@@ -32,7 +32,11 @@ func _process(delta):
 		if Input.is_action_pressed("right"):
 			velocity.x = Speed
 		if Input.is_action_pressed("ability1"):
-			emit_signal("ability")
+			emit_signal("ability", 1)
+		if Input.is_action_just_pressed("ability2"):
+			emit_signal("ability", 2)
+		if Input.is_action_just_pressed("ability3"):
+			emit_signal("ability", 3)
 		velocity = move_and_slide(velocity)
 		rpc_unreliable("update_position", position)
 	

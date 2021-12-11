@@ -12,9 +12,9 @@ __meta__ = {
 
 [node name="Ready" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 448.0
-margin_right = 192.0
-margin_bottom = 472.0
+margin_top = 672.0
+margin_right = 256.0
+margin_bottom = 736.0
 text = "Ready"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -22,9 +22,9 @@ __meta__ = {
 
 [node name="Start" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 496.0
-margin_right = 192.0
-margin_bottom = 516.0
+margin_top = 768.0
+margin_right = 256.0
+margin_bottom = 832.0
 disabled = true
 text = "Start"
 __meta__ = {
@@ -42,9 +42,9 @@ __meta__ = {
 
 [node name="ReadyStatus" type="Label" parent="."]
 margin_left = 64.0
-margin_top = 408.0
-margin_right = 192.0
-margin_bottom = 439.0
+margin_top = 640.0
+margin_right = 256.0
+margin_bottom = 671.0
 text = "0/0 Ready
 "
 align = 1

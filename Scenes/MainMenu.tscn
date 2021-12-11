@@ -12,9 +12,9 @@ __meta__ = {
 
 [node name="JoinServer" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 320.0
-margin_right = 192.0
-margin_bottom = 352.0
+margin_top = 680.0
+margin_right = 256.0
+margin_bottom = 736.0
 text = "Join Server"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -22,9 +22,9 @@ __meta__ = {
 
 [node name="StartServer" type="Button" parent="."]
 margin_left = 64.0
-margin_top = 256.0
-margin_right = 190.0
-margin_bottom = 288.0
+margin_top = 576.0
+margin_right = 256.0
+margin_bottom = 640.0
 text = "Host Server"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -32,9 +32,9 @@ __meta__ = {
 
 [node name="IpInput" type="LineEdit" parent="."]
 margin_left = 64.0
-margin_top = 384.0
-margin_right = 382.0
-margin_bottom = 416.0
+margin_top = 768.0
+margin_right = 384.0
+margin_bottom = 832.0
 rect_pivot_offset = Vector2( 288, 96 )
 align = 1
 placeholder_text = "127.0.0.1"
@@ -43,20 +43,20 @@ __meta__ = {
 }
 
 [node name="Options" type="Button" parent="."]
-margin_left = 832.0
-margin_top = 384.0
-margin_right = 958.0
-margin_bottom = 416.0
+margin_left = 1344.0
+margin_top = 768.0
+margin_right = 1534.0
+margin_bottom = 832.0
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="NameInput" type="LineEdit" parent="."]
-margin_left = 384.0
-margin_top = 32.0
-margin_right = 704.0
-margin_bottom = 64.0
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 576.0
+margin_bottom = 128.0
 align = 1
 max_length = 16
 placeholder_text = "Choose a Name"

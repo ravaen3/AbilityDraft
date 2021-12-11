@@ -23,8 +23,9 @@ func connected():
 	
 func _on_JoinServer_pressed():
 	var FullIP=$IpInput.text.split(":")
-	Network.server_ip = FullIP[0]
-	Network.server_port = FullIP[1]
+	if FullIP[0].is_valid_ip_address():
+		Network.server_ip = FullIP[0]
+		Network.server_port = FullIP[1]
 	Network.join_server()
 	pass # Replace with function body.
 
