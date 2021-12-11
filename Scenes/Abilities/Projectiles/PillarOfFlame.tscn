@@ -7,13 +7,12 @@
 radius = 64.4986
 
 [node name="PillarOfFlame" type="Area2D"]
-scale = Vector2( 2, 2 )
+scale = Vector2( 3, 3 )
 script = ExtResource( 2 )
 
 [node name="Indicator" type="Sprite" parent="."]
 self_modulate = Color( 0.784314, 0.784314, 0.784314, 0.27451 )
 position = Vector2( -5.72205e-06, -5.72205e-06 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 1 )
 
 [node name="tIndicator" type="Sprite" parent="."]

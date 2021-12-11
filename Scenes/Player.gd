@@ -5,15 +5,13 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 var health=100.0
-var speed = 500
-var attackSpeed = 2
 var is_master = false
-<<<<<<< Updated upstream
+
 var speed = 700
 var AttackSpeed = 2
-=======
+
 var dead = false
->>>>>>> Stashed changes
+
 signal ability(slot)
 # Called when the node enters the scene tree for the first time.
 func initialize(id):
@@ -30,7 +28,6 @@ func _process(delta):
 	if is_master:
 		var velocity = Vector2()
 		if Input.is_action_pressed("up"):
-<<<<<<< Updated upstream
 			velocity.y = -1
 		if Input.is_action_pressed("down"):
 			velocity.y = 1
@@ -38,21 +35,6 @@ func _process(delta):
 			velocity.x = -1
 		if Input.is_action_pressed("right"):
 			velocity.x = 1
-		if Input.is_action_pressed("ability1"):
-			emit_signal("ability", 1)
-		if Input.is_action_just_pressed("ability2"):
-			emit_signal("ability", 2)
-		if Input.is_action_just_pressed("ability3"):
-			emit_signal("ability", 3)
-		velocity=velocity.normalized()*speed
-=======
-			velocity.y = -speed
-		if Input.is_action_pressed("down"):
-			velocity.y = speed
-		if Input.is_action_pressed("left"):
-				velocity.x = -speed
-		if Input.is_action_pressed("right"):
-				velocity.x = speed
 		if not dead:
 			if Input.is_action_pressed("ability1"):
 				emit_signal("ability", 1)
@@ -60,9 +42,10 @@ func _process(delta):
 				emit_signal("ability", 2)
 			if Input.is_action_just_pressed("ability3"):
 				emit_signal("ability", 3)
->>>>>>> Stashed changes
-		velocity = move_and_slide(velocity)
-		rpc_unreliable("update_position", position)
+		velocity=velocity.normalized()*speed
+		velocity=move_and_slide(velocity)
+		$Sprite.rotation=get_angle_to(get_global_mouse_position())
+		rpc_unreliable("update_position", position, rotation)
 		
 		#TOGGLES DEATHSCREEN WHEN PLAYER IS DEAD
 		if health <= 0:
@@ -76,7 +59,8 @@ remotesync func update_health(change):
 	$HealthBar.scale.x= float(health)/100.0
 	if health<=0:
 		queue_free()
-remote func update_position(pos):
+remote func update_position(pos, rot):
+	rotation = rot
 	position = pos
 #TURNS PLAYER INTO A "GHOST" AT DEATH
 remote func die():
