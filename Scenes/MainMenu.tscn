@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinServer" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 320.0
+margin_right = 192.0
+margin_bottom = 352.0
+text = "Join Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartServer" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 256.0
+margin_right = 190.0
+margin_bottom = 288.0
+text = "Host Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IpInput" type="LineEdit" parent="."]
+margin_left = 64.0
+margin_top = 384.0
+margin_right = 382.0
+margin_bottom = 416.0
+rect_pivot_offset = Vector2( 288, 96 )
+align = 1
+placeholder_text = "127.0.0.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="."]
+margin_left = 832.0
+margin_top = 384.0
+margin_right = 958.0
+margin_bottom = 416.0
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameInput" type="LineEdit" parent="."]
+margin_left = 384.0
+margin_top = 32.0
+margin_right = 704.0
+margin_bottom = 64.0
+align = 1
+max_length = 16
+placeholder_text = "Choose a Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="JoinServer" to="." method="_on_JoinServer_pressed"]
+[connection signal="pressed" from="StartServer" to="." method="_on_StartServer_pressed"]
+[connection signal="text_changed" from="NameInput" to="." method="_on_NameInput_text_changed"]

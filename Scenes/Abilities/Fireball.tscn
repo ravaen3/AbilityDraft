@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Ability1.gd" type="Script" id=1]
+
+[node name="FireballEmitter" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Emitter" type="Position2D" parent="."]
+position = Vector2( 200, 0 )
