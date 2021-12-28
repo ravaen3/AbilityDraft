@@ -9,6 +9,7 @@ var server_port = DEFAULT_PORT
 var is_host = false
 var client_id = null
 var client_name = "Guest"
+var client_abilities = ["Fireball","IceShards","PillarOfFlame"]
 var peer_ids = []
 
 func start_server():

@@ -36,7 +36,7 @@ func _on_Ready_pressed():
 
 
 func _on_Start_pressed():
-	rpc("start_game")
+	rpc("start_draft")
 
-remotesync func start_game():
-	get_tree().change_scene("res://Scenes/Game.tscn")
+remotesync func start_draft():
+	get_tree().change_scene("res://Scenes/Draft.tscn")

@@ -4,7 +4,7 @@ extends Area2D
 var total_travel_time = 0.5
 var travel_time = 0
 var duration = 0.2
-var damage = 25
+var damage = 35
 var active = false
 
 # Called when the node enters the scene tree for the first time.

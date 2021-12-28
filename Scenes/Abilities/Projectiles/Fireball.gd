@@ -4,7 +4,7 @@ extends Area2D
 # Declare member variables here. Examples:
 var ProjectileSpeed = 1500
 var velocity = Vector2(0,0)
-var damage = 10
+var damage = 30
 # var b = "text"
 
 
@@ -12,6 +12,8 @@ var damage = 10
 func _ready():
 	velocity.x=ProjectileSpeed
 	velocity=velocity.rotated(rotation)
+	yield(get_tree().create_timer(60), "timeout")
+	queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
