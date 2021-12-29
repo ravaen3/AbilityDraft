@@ -19,7 +19,7 @@ func activate(slot):
 			
 			if on_cooldown == false:
 				on_cooldown = true
-				get_parent().update_icon(ability_slot, on_cooldown)
+				get_parent().update_icon(ability_slot, cooldown)
 				rotation=0
 				rotation=get_angle_to(get_global_mouse_position())
 				get_parent().speed=get_parent().speed*dash_speed
@@ -27,4 +27,4 @@ func activate(slot):
 				get_parent().speed=get_parent().speed/dash_speed
 				yield(get_tree().create_timer(cooldown), "timeout")
 				on_cooldown = false
-				get_parent().update_icon(ability_slot, on_cooldown)
+				get_parent().update_icon(ability_slot, 0)

@@ -2,10 +2,9 @@ extends Area2D
 
 
 # Declare member variables here. Examples:
-var projectile_speed = 500
+var projectile_speed = 2000
 var velocity = Vector2(0,0)
-var damage = 40
-var stun_duration = 0.3
+var damage = 10
 # var b = "text"
 
 
@@ -13,18 +12,16 @@ var stun_duration = 0.3
 func _ready():
 	velocity.x=projectile_speed
 	velocity=velocity.rotated(rotation)
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(60), "timeout")
 	queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	velocity=velocity*1.02
 	position+=velocity*delta
-	stun_duration+=delta
 
-func _on_Boulder_body_entered(body):
+
+func _on_LightRay_body_entered(body):
 	if Network.is_host:
 		body.rpc("update_health",-damage)
-		body.rpc("set_status_effect", "stunned", stun_duration)
 	queue_free()

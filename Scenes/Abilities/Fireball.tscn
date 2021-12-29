@@ -1,9 +1,12 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Scenes/Abilities/Fireball.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Abilities/Ability.gd" type="Script" id=1]
 
 [node name="FireballAbility" type="Node2D"]
 script = ExtResource( 1 )
+cooldown = 1.2
+ability_damage = 35
+projectile_speed = 1500
 
 [node name="Emitter" type="Position2D" parent="."]
 position = Vector2( 128, 0 )

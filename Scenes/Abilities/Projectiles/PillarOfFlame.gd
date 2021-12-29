@@ -1,9 +1,9 @@
 extends Area2D
 
 
-var total_travel_time = 0.5
+var total_travel_time = 0.7
 var travel_time = 0
-var duration = 0.2
+var duration = 0.3
 var damage = 35
 var active = false
 

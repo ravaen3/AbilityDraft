@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scenes/Abilities/SummonBoulder.gd" type="Script" id=1]
+[ext_resource path="res://Images/Abilities/Icons/SummonBoulder.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Abilities/Projectiles/SummonBoulder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Abilities/Ability.gd" type="Script" id=3]
 
 [node name="SummonBoulder" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource( 3 )
+cooldown = 3.0
+cast_time = 1.0
+icon_texture = ExtResource( 1 )
+projectile = ExtResource( 2 )
+ability_damage = 40
+projectile_speed = 700
 
 [node name="Emitter" type="Position2D" parent="."]
 position = Vector2( 160, 0 )
