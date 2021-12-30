@@ -2,7 +2,7 @@ extends Area2D
 
 
 # Declare member variables here. Examples:
-var ProjectileSpeed = 1000
+var projectile_speed = 1000
 var velocity = Vector2(0,0)
 var damage = 20
 var root_duration = 1
@@ -11,7 +11,7 @@ var root_duration = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	velocity.x=ProjectileSpeed
+	velocity.x=projectile_speed
 	velocity=velocity.rotated(rotation)
 	yield(get_tree().create_timer(1), "timeout")
 	queue_free()

@@ -5,7 +5,7 @@
 [node name="FireballAbility" type="Node2D"]
 script = ExtResource( 1 )
 cooldown = 1.2
-ability_damage = 35
+ability_damage = 25
 projectile_speed = 1500
 
 [node name="Emitter" type="Position2D" parent="."]

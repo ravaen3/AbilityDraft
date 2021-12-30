@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Abilities/Ability.gd" type="Script" id=1]
+[ext_resource path="res://Images/Abilities/Icons/DazzlingLight.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Abilities/Projectiles/LightBall.tscn" type="PackedScene" id=3]
+
+[node name="DazzlingLight" type="Node2D"]
+script = ExtResource( 1 )
+cooldown = 3.0
+cast_time = 0.2
+mana_cost = 20.0
+icon_texture = ExtResource( 2 )
+projectile = ExtResource( 3 )
+ability_damage = 20
+projectile_speed = 1600
+
+[node name="Emitter" type="Position2D" parent="."]
+position = Vector2( 128, 0 )

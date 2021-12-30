@@ -162,7 +162,7 @@ centered = false
 [node name="ManaBar" type="Sprite" parent="."]
 self_modulate = Color( 0, 0.490196, 1, 1 )
 position = Vector2( -64, 88 )
-scale = Vector2( 1, 0.0625 )
+scale = Vector2( 1, 0.125 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -207,7 +207,6 @@ __meta__ = {
 }
 
 [node name="CDDisplay" type="ColorRect" parent="HUD/Ability1"]
-margin_top = 64.0
 margin_right = 64.0
 margin_bottom = 64.0
 color = Color( 0, 0, 0, 0.196078 )

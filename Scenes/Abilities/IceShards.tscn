@@ -9,7 +9,7 @@ cooldown = 2.5
 mana_cost = 25.0
 icon_texture = ExtResource( 1 )
 projectile_pattern = 3
-ability_damage = 25
+ability_damage = 15
 projectile_speed = 1200
 
 [node name="Emitter" type="Position2D" parent="."]

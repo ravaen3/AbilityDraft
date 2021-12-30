@@ -7,7 +7,7 @@ var on_cooldown = false
 var mana_cost = 20
 var icon_texture = load("res://Images/Abilities/Icons/GraspingVines.png")
 export var ability_slot = 0
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	get_parent().connect("ability", self, "activate")
 	get_parent().set_icon(ability_slot, icon_texture)

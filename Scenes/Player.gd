@@ -151,7 +151,8 @@ remotesync func ghostify():
 
 
 func _on_RegenTimer_timeout():
-	if mana<max_mana:
-		rpc("update_mana", mana_regen)
-	if health<max_health:
-		rpc("update_health",health_regen)
+	if is_master:
+		if mana<max_mana:
+			rpc("update_mana", mana_regen)
+		if health<max_health:
+			rpc("update_health",health_regen)
